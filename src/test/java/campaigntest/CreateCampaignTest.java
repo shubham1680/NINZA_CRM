@@ -93,6 +93,7 @@ public class CreateCampaignTest extends BaseClass{
 			System.out.println("Campaign not created");*/
 		homePage.getCloseToastMsg().click();
 		Assert.assertTrue(msg.contains(TOAST_MSG_VERIFICATION));
+		System.out.println("hello");
 		
 	
 		//homePage.logout();
