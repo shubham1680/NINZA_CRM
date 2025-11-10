@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<suite name="Suite">
+<listeners>
+<listener class-name="genericutilities.ListenerImplementation"></listener>
+<listener class-name="genericutilities.IRetryImplementation"></listener>
+</listeners>
+  <test thread-count="5" name="Test">
+    <classes>
+      <class name="TestNG.FlowOFTestNG"/>
+      <class name="campaigntest.CreateCampaignTest"/>
+      <class name="contacttest.CreateContactTest"/>
+      <class name="producttest.AddProductTest"/>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->
