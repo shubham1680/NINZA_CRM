@@ -94,6 +94,7 @@ public class CreateCampaignTest extends BaseClass{
 		homePage.getCloseToastMsg().click();
 		Assert.assertTrue(msg.contains(TOAST_MSG_VERIFICATION));
 		System.out.println("hello");
+		System.out.println("Hello");
 		
 	
 		//homePage.logout();
