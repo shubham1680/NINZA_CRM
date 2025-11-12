@@ -9,6 +9,7 @@ import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
 
+import org.openqa.selenium.Dimension;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -63,7 +64,7 @@ public class BaseClass {
 		else if(BROWSER.equalsIgnoreCase("safari"))
 			driver=new SafariDriver();
 		sdriver=driver;
-		driver.manage().window().maximize();
+		driver.manage().window().setSize(new Dimension(1920, 1080));
 		
 		wLib.implicitWait(driver);
   }
