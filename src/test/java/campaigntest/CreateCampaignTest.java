@@ -30,7 +30,7 @@ import objectrepository.LoginPage;
 public class CreateCampaignTest extends BaseClass{
 
 	@Test(groups = {"smoke","regression"})
-	public void createCampaignWithMandatoryFieldsTest() throws EncryptedDocumentException, IOException
+	public void createCampaignWithMandatoryFieldsTest() throws EncryptedDocumentException, IOException, InterruptedException
 	{
 		/*PropertyFileUtility pLib=new PropertyFileUtility();
 		String BROWSER=pLib.readDataFromPropertyFile("Browser");
@@ -73,6 +73,7 @@ public class CreateCampaignTest extends BaseClass{
 		
 	
 		CampaignsPage campaignsPage=new CampaignsPage(driver);
+		Thread.sleep(2000);
 		campaignsPage.getAddCreateCampaignBtn().click();
 		CreateCampaignPage createCampaignPage=new CreateCampaignPage(driver);
 		createCampaignPage.getCampaignNameTF().sendKeys(CAMPAIGN_NAME);
@@ -80,6 +81,7 @@ public class CreateCampaignTest extends BaseClass{
 		createCampaignPage.getTargetSizeTF().clear();
 		createCampaignPage.getTargetSizeTF().sendKeys(TARGET_SIZE);
 		
+		Thread.sleep(2000);
 		createCampaignPage.getCreateCampaignBtn().click();
 		
 		HomePage homePage=new HomePage(driver);
@@ -103,7 +105,7 @@ public class CreateCampaignTest extends BaseClass{
 	}
 	
 	@Test(groups = "smoke")
-	public void createCampaignWithStatusTest() throws EncryptedDocumentException, IOException
+	public void createCampaignWithStatusTest() throws EncryptedDocumentException, IOException, InterruptedException
 	{
 		/*PropertyFileUtility pLib=new PropertyFileUtility();
 		String BROWSER=pLib.readDataFromPropertyFile("Browser");
@@ -145,6 +147,7 @@ public class CreateCampaignTest extends BaseClass{
 		
 
 		CampaignsPage campaignsPage=new CampaignsPage(driver);
+		Thread.sleep(2000);
 		campaignsPage.getAddCreateCampaignBtn().click();
 		CreateCampaignPage createCampaignPage=new CreateCampaignPage(driver);
 		createCampaignPage.getCampaignNameTF().sendKeys(CAMPAIGN_NAME);
@@ -154,6 +157,7 @@ public class CreateCampaignTest extends BaseClass{
 		createCampaignPage.getTargetSizeTF().clear();
 		createCampaignPage.getTargetSizeTF().sendKeys(TARGET_SIZE);
 		
+		Thread.sleep(2000);
 		createCampaignPage.getCreateCampaignBtn().click();
 		
 		HomePage homePage=new HomePage(driver);
@@ -177,7 +181,7 @@ public class CreateCampaignTest extends BaseClass{
 	}
 	
 	@Test(groups = "regression")
-	public void createCampaignWithExpectedCloseDateTest() throws EncryptedDocumentException, IOException
+	public void createCampaignWithExpectedCloseDateTest() throws EncryptedDocumentException, IOException, InterruptedException
 	{
 		/*PropertyFileUtility pLib=new PropertyFileUtility();
 		String BROWSER=pLib.readDataFromPropertyFile("Browser");
@@ -224,6 +228,7 @@ public class CreateCampaignTest extends BaseClass{
 		
 		
 		CampaignsPage campaignsPage=new CampaignsPage(driver);
+		Thread.sleep(2000);
 		campaignsPage.getAddCreateCampaignBtn().click();
 		CreateCampaignPage createCampaignPage=new CreateCampaignPage(driver);
 		createCampaignPage.getCampaignNameTF().sendKeys(CAMPAIGN_NAME);
@@ -232,7 +237,7 @@ public class CreateCampaignTest extends BaseClass{
 
 		createCampaignPage.getTargetSizeTF().clear();
 		createCampaignPage.getTargetSizeTF().sendKeys(TARGET_SIZE);
-	
+		Thread.sleep(2000);
 		createCampaignPage.getCreateCampaignBtn().click();
 		HomePage homePage=new HomePage(driver);
 		

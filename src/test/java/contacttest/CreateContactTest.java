@@ -33,7 +33,7 @@ import objectrepository.SelectCampaignPage;
 public class CreateContactTest extends BaseClass{
 
 	@Test(groups = {"smoke","regression"})
-	public void CreateContactWithMandatoryFieldsTest() throws EncryptedDocumentException, IOException
+	public void CreateContactWithMandatoryFieldsTest() throws EncryptedDocumentException, IOException, InterruptedException
 	{
 		/*PropertyFileUtility pLib=new PropertyFileUtility();
 		String BROWSER=pLib.readDataFromPropertyFile("Browser");
@@ -83,13 +83,14 @@ public class CreateContactTest extends BaseClass{
 		
 	
 		CampaignsPage campaignsPage=new CampaignsPage(driver);
+		Thread.sleep(2000);
 		campaignsPage.getAddCreateCampaignBtn().click();
 		CreateCampaignPage createCampaignPage=new CreateCampaignPage(driver);
 		createCampaignPage.getCampaignNameTF().sendKeys(CAMPAIGN_NAME);
 	
 		createCampaignPage.getTargetSizeTF().clear();
 		createCampaignPage.getTargetSizeTF().sendKeys(TARGET_SIZE);
-		
+		Thread.sleep(2000);
 		createCampaignPage.getCreateCampaignBtn().click();
 		
 		HomePage homePage=new HomePage(driver);
